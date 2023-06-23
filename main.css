@@ -1,4 +1,322 @@
-.color {
-    color:rgb(106, 0, 255);
-    font-size: medium;
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
+
+html {
+scroll-behavior: smooth;
 }
+
+body {
+  background: rgb(18, 18, 185);
+  background: linear-gradient(
+    90deg,
+    rgb(166, 163, 233) 0%,
+    rgb(105, 105, 248) 35%,
+    rgb(154, 210, 221) 100%
+  );
+
+  font-family: "Moirai One";
+  color: white;
+  font-size: 50px;
+  font-weight: 100;
+  text-decoration: none;
+  text-shadow: 4px 4px 3px rgba(250, 4, 246, 0.818);
+}
+
+
+.cat {
+  height: 200px;
+  width: 300px;
+  background-color: rgb(157, 183, 243);
+  border: solid 10px white dashed;
+  box-shadow: 20px 5px 5px blue;
+}
+
+.robot {
+  height: 200px;
+  width: 400px;
+  background-color: blueviolet;
+  border: solid 7px blue dashed;
+  box-shadow: 20px 5px 5px purple;
+}
+
+.body {
+  background: linear-gradient(90deg, color blue(2, 0, 36, 1));
+}
+
+.bigflex {
+  display: flex;
+  border: black;
+  height: 600px;
+  width: 600px;
+  background-color: rgb(251, 170, 188);
+  border: 7px black solid;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.you {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex1 {
+  display: flex;
+  border: blue;
+  width: 30%;
+}
+
+.flex2 {
+  display: flex;
+  border: blue;
+  width: 30%;
+}
+
+.flex3 {
+  display: flex;
+  border: blue;
+  width: 30%;
+}
+
+.star {
+  display: flex;
+  position: relative;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background: grey;
+  height: 20px;
+  width: 20px;
+  color: white;
+  box-shadow: 20px 5px 5px rgb(51, 42, 42);
+}
+
+.box {
+  display: flex;
+  position: relative;
+  background-image: linear-gradient(blue, rgb(178, 178, 230));
+  border: black 1px solid;
+  width: 100px;
+}
+
+.text-decoration {
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  border: black 3px solid;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  font-weight: 100;
+  transition: 0.3s all;
+}
+
+a:hover {
+  background: rgb(230, 148, 225);
+  border-radius: 10px;
+}
+
+.calender {
+  width: 90%;
+  margin-left: 6rem;
+  height: 70vh;
+}
+
+.week {
+  display: flex;
+  border: 2px black solid;
+  height: 10vh;
+}
+
+.day_wrapper {
+  display: flex;
+}
+
+.dayname {
+  border: 2px black solid;
+  height: 5vh;
+  width: 14.3%;
+  font-size: x-large;
+  display: flex;
+}
+
+.dayname::before {
+  content: attr(dayname);
+  display: flex;
+  font-size: large;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.day {
+  border: 2px black solid;
+  height: 10vh;
+  width: 14.3%;
+  font-size: medium;
+}
+
+.day::before {
+  content: attr(day);
+  display: flex;
+  height: 20px;
+  width: 30px;
+  border: black 1px solid;
+}
+
+.day::after {
+  content: attr(weekend);
+  display: flex;
+  transform: translate(80%, -60%);
+  font-size: medium;
+}
+
+.chores {
+  display: inline-block;
+}
+
+.frog {
+  font-size: xx-large;
+  background-color: rgb(185, 185, 254);
+}
+
+.toad {
+  font-size: xx-large;
+  background-color: rgb(240, 6, 6);
+}
+
+
+.hood {
+  line-height: 2;
+  margin: auto;
+  margin-bottom: 2;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  margin-left: 2rem;
+  border-radius: 50%;
+  background: conic-gradient(rgb(187, 241, 187), rgb(188, 188, 246));
+  border: black 1px solid;
+  
+}
+
+.circle:hover {
+  animation: rotate-circle infinite 2s linear;
+}
+
+@keyframes rotate-circle {
+  from {
+    rotate: 360deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+    scale: 2;
+  }
+  to {
+    transform: translateX(500px);
+    opacity: 0.5;
+    scale: 0.5;
+  }
+}
+
+.circle_jr {
+  height: 10px;
+  width: 10px;
+  margin: 0rem;
+  border-radius: 50%;
+  background: white;
+  border: black 1px solid;
+  animation: bubble infinite 1s linear;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.jr {
+  display: flex;
+  transform: translateX(-110%);
+}
+
+.light {
+  height: 15px;
+  width: 15px;
+  background-color: blueviolet;
+  display: flex;
+  position: relative;
+  animation: blink 1s linear 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.img {
+  background-image: url(/assets/food.jpg);
+  background-size: cover;
+  width: 400px;
+  border: black 2px solid;
+  margin-bottom: 2rem;
+  width: 100px;
+}
+
+@media screen and (min-width: 587px) and (max-width: 1200px){
+  .day {
+    height: 5vh;
+    border: 2px rgb(250, 181, 234) solid;
+  }
+    
+  .week {
+    height: 5vh;
+  }
+  
+  .calender {
+    width: 70%;
+    background-color: rgb(198, 17, 129);
+  }
+}
+
+@media screen and (min-width: 150px) and (max-width: 586px){
+  .day {
+    height: 15vh;
+    border: 2px rgb(181, 219, 250) solid;
+  }
+    
+  .week {
+    height: 15vh;
+  }
+  
+  .calender {
+    width: 95%;
+    background-color: rgb(235, 252, 202);
+  }
+}
+
+/*selected link*/
+a:active {
+  color: rgb(192, 245, 198);
+}
+
